@@ -8,6 +8,26 @@
 // Example:
 //   fib(4) === 3
 
-function fib(n) {}
+// function fib(n) { //recursion
+//     if (n === 1 || n === 2) {
+//         return 1;
+//     }
+//
+//     return fib(n - 1) + fib(n - 2)
+// }
+
+function fib(n) { //loop
+    result=[];
+    for (let j = 1; j <= n; j++) {
+       if(j===1||j===2){
+           result.push(1);
+       }
+       else{
+
+           result.push((result[result.length-1]+result[result.length-2]));
+       }
+    }
+    return result[result.length-1];
+}
 
 module.exports = fib;
